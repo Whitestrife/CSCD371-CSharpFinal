@@ -1,0 +1,36 @@
+﻿<Window x:Class="TetrisFinal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TetrisFinal"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800" ResizeMode="NoResize">
+    <Canvas>
+
+        <Image Canvas.Left="51" Canvas.Top="35">
+            <Image.Source>
+                <BitmapImage UriSource="/images/TetrisLogo.png"></BitmapImage>
+            </Image.Source>
+        </Image>
+        <Button Canvas.Left="320" Canvas.Top="286" Width="160" Height="30" Click="PlayButton_Click">Play</Button>
+        <Button Canvas.Left="320" Canvas.Top="378" Height="30" Width="160" RenderTransformOrigin="0.5,0.5" Click="HighScoreButton_Click">High Scores</Button>
+        <Menu DockPanel.Dock="Left" Width="800">
+            <MenuItem Name="FileButton" Header="_File">
+                <MenuItem x:Name="MenuPlayButton" Header="_Start" Click="PlayButton_Click" />
+                <MenuItem x:Name="MenuHighScoreButton" Header="_HighScore" Click="HighScoreButton_Click" />
+                <Separator />
+                <MenuItem Header="_Close" Click="MenuClose_Click" />
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_Tutorial" Click="MenuTutorial_Click" />
+                <MenuItem Header="_Controls" Click="MenuControls_Click" />
+                <Separator />
+                <MenuItem Header="_About" Click="MenuAbout_Click" />
+            </MenuItem>
+        </Menu>
+    </Canvas>
+
+
+
+</Window>

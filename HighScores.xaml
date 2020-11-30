@@ -1,0 +1,15 @@
+﻿<Window x:Class="TetrisFinal.HighScores"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TetrisFinal"
+        mc:Ignorable="d"
+        Title="HighScores" Height="600" Width="400" ResizeMode="NoResize">
+    <DataGrid x:Name="HighScoreTable" Margin="20,50,20,28" AlternatingRowBackground="LightGray" CanUserAddRows="False" AutoGenerateColumns="False" Background="DarkGray">
+        <DataGrid.Columns>
+            <DataGridTextColumn x:Name="UserName" Header="UserName" Binding="{Binding Name}" CanUserResize="False" Width="180" FontFamily="NSimSun" FontSize="16"></DataGridTextColumn>
+            <DataGridTextColumn x:Name="Score" Header="Score" Binding="{Binding Score}" CanUserResize="False" Width="180" FontFamily="NSimSun" FontSize="16"></DataGridTextColumn>
+        </DataGrid.Columns>
+    </DataGrid>
+</Window>
